@@ -1,0 +1,235 @@
+                            /* Reset default styling */
+                            
+                            * {
+                                margin: 0;
+                                padding: 0;
+                                box-sizing: border-box;
+                            }
+                            
+                            body {
+                                font-family: Arial, sans-serif;
+                                background-color: #fafafa;
+                            }
+                            /* Navbar */
+                            
+                            .navbar {
+                                width: 100%;
+                                background-color: #fff;
+                                display: flex;
+                                justify-content: space-between;
+                                align-items: center;
+                                padding: 10px 20px;
+                                border-bottom: 1px solid #dbdbdb;
+                                position: fixed;
+                                top: 0;
+                                z-index: 1000;
+                            }
+                            
+                            .navbar-left {
+                                display: flex;
+                                align-items: center;
+                            }
+                            
+                            .navbar-right {
+                                display: flex;
+                                align-items: center;
+                            }
+                            
+                            .navbar-brand {
+                                font-size: 1.5em;
+                                font-weight: bold;
+                            }
+                            
+                            .navbar-icon {
+                                width: 24px;
+                                margin-left: 15px;
+                            }
+                            /* Main content */
+                            
+                            .main-content {
+                                padding-top: 60px;
+                                /* Adjust padding to make space for fixed navbar */
+                                padding-bottom: 60px;
+                                /* Adjust padding to make space for fixed footer */
+                            }
+                            /* Main content */
+                            
+                            .main-content {
+                                padding-top: 60px;
+                                /* Adjust padding to make space for fixed navbar */
+                                padding-bottom: 60px;
+                                /* Adjust padding to make space for fixed footer */
+                            }
+                            
+                            .stories {
+                                display: flex;
+                                overflow-x: scroll;
+                                padding: 10px;
+                                background-color: #fff;
+                                border-bottom: 1px solid #dbdbdb;
+                            }
+                            
+                            .story {
+                                text-align: center;
+                                margin-right: 10px;
+                            }
+                            
+                            p {
+                                font-size: 15px;
+                                font-weight: 545;
+                            }
+                            
+                            .story-border {
+                                width: 67px;
+                                height: 67px;
+                                border-radius: 50%;
+                                background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888, #9c1ab1);
+                                padding: 2px;
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                            }
+                            
+                            .story-img {
+                                width: 64px;
+                                border-radius: 50%;
+                                background-color: #fff;
+                                /* White background to simulate border */
+                                padding: 3px;
+                            }
+                            
+                            .story img {
+                                border-radius: 50%;
+                                width: 100%;
+                                height: 100%;
+                                object-fit: cover;
+                                justify-content: center;
+                            }
+                            /* Feed */
+                            
+                            .feed {
+                                background-color: #fff;
+                            }
+                            
+                            .post {
+                                border-bottom: 1px solid #dbdbdb;
+                                margin-bottom: 10px;
+                            }
+                            
+                            .post-header {
+                                display: flex;
+                                align-items: center;
+                                justify-content: space-between;
+                                padding: 10px;
+                            }
+                            
+                            .post-header span {
+                                font-size: 20px;
+                                font-weight: 550;
+                            }
+                            
+                            .post-profile-img {
+                                border-radius: 50%;
+                                margin-right: 10px;
+                                width: 4vw;
+                                height: 4vw;
+                                max-width: 50px;
+                                max-height: 50px;
+                                border: 2px solid #cc2366, ;
+                                object-fit: cover;
+                                /* Ensure image fits nicely */
+                            }
+                            
+                            .post-username {
+                                flex-grow: 1;
+                            }
+                            
+                            .more-icon {
+                                width: 20px;
+                            }
+                            
+                            .post-img {
+                                width: 100%;
+                                display: flex;
+                                object-fit: cover;
+                                /* Ensure image fits nicely */
+                            }
+                            
+                            .post-info {
+                                padding: 10px;
+                            }
+                            
+                            .post-video {
+                                width: 100%;
+                            }
+                            
+                            .post-info strong {
+                                font-size: 17px;
+                                font-weight: 550;
+                                color: rgb(24, 24, 24);
+                            }
+                            
+                            .post-actions img {
+                                width: 24px;
+                                margin-right: 10px;
+                            }
+                            
+                            .post-actions {
+                                margin-bottom: 10px;
+                            }
+                            
+                            .footer-nav {
+                                width: 100%;
+                                background-color: #fff;
+                                display: flex;
+                                justify-content: space-around;
+                                align-items: center;
+                                padding: 10px 0;
+                                border-top: 1px solid #dbdbdb;
+                                position: fixed;
+                                bottom: 0;
+                                z-index: 1000;
+                            }
+                            
+                            .footer-nav img {
+                                width: 24px;
+                            }
+                            
+                            .footer-nav .profile_user {
+                                border-radius: 50%;
+                                height: 28px;
+                                width: 28px;
+                            }
+                            /* Animation for moving image */
+                            
+                            @keyframes moveImage {
+                                0% {
+                                    transform: translateY(0);
+                                }
+                                100% {
+                                    transform: translateY(-100%);
+                                }
+                            }
+                            
+                            .moving-image {
+                                animation: moveImage 5s linear infinite;
+                            }
+                            /* Responsive design */
+                            
+                            @media (max-width: 768px) {
+                                .post-profile-img {
+                                    width: 8.5vw;
+                                    height: 8.5vw;
+                                    max-width: 40px;
+                                    max-height: 40px;
+                                }
+                            }
+                            
+                            @media (max-width: 1400px) {
+                                .post-profile-img {
+                                    width: 12vw;
+                                    height: 12vw;
+                                    max-width: 60px;
+                                    max-height: 60px;
+                                }
+                            }
